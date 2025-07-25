@@ -21,6 +21,7 @@ wheels/
 *.egg
 
 # Virtual Environment
+.venv/
 venv/
 env/
 ENV/
@@ -56,3 +57,20 @@ models/*.onnx
 # Certificates
 certs/*.pem
 certs/*.key
+
+# Python tool caches
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.pylint.d/
+
+# Test/coverage reports
+coverage.xml
+nosetests.xml
+junit-*.xml
+
+# Dependency lock files (if not used)
+poetry.lock
+Pipfile.lock
