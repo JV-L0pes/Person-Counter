@@ -11,12 +11,16 @@ import uuid
 
 
 class Gender(Enum):
+    """Enumeração para representar o gênero de uma pessoa detectada"""
+
     MALE = "male"
     FEMALE = "female"
     UNKNOWN = "unknown"
 
 
 class AgeGroup(Enum):
+    """Enumeração para representar o grupo etário de uma pessoa detectada"""
+
     CHILD = "child"  # 0-17 anos
     ADULT = "adult"  # 18+ anos
     UNKNOWN = "unknown"
@@ -33,15 +37,17 @@ class BoundingBox:
     confidence: float
 
     def __post_init__(self):
-        if not (0.0 <= self.confidence <= 1.0):
+        if not 0.0 <= self.confidence <= 1.0:
             raise ValueError("Confidence deve estar entre 0.0 e 1.0")
 
     @property
     def area(self) -> int:
+        """Retorna a área da bounding box"""
         return self.width * self.height
 
     @property
     def center(self) -> Tuple[int, int]:
+        """Retorna o centro da bounding box como uma tupla (x, y)"""
         return (self.x + self.width // 2, self.y + self.height // 2)
 
 
