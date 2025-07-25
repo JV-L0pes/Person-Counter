@@ -49,18 +49,10 @@ models/*.onnx
 
 # Environment
 .env
+.env.example
 .env.local
 .env.production
-# .env.example agora será versionado como modelo
 
 # Certificates
 certs/*.pem
 certs/*.key
-
-# Arquivos temporários e de backup
-*~
-*.bak
-
-# Lockfiles Python (opcional, descomente se usar pipenv/poetry)
-# Pipfile.lock
-# poetry.lock
