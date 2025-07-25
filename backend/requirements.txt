@@ -1,1 +1,47 @@
-black>=22.3.0
+# Core Dependencies
+ultralytics==8.0.196
+opencv-python==4.8.1.78
+numpy==1.26.4
+Pillow==10.0.0
+
+# Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+gunicorn==21.2.0
+
+# Data Processing
+pandas==2.2.2
+
+# Testing
+pytest==7.4.2
+pytest-cov==4.1.0
+pytest-mock==3.11.1
+
+# Development Tools
+black==23.7.0
+flake8==6.0.0
+mypy==1.5.1
+pylint==3.3.7
+
+# Logging and Monitoring
+structlog==23.1.0
+
+# Environment and Configuration
+python-dotenv==1.0.0
+
+# Optional: ONNX Runtime for age/gender models
+onnxruntime==1.18.1
+
+# Optional: Deep learning models (uncomment if using custom models)
+# torch==2.0.1
+# torchvision==0.15.2
+
+# Production Dependencies
+redis==4.6.0  # For caching in production
+psycopg2-binary==2.9.7  # PostgreSQL adapter if using database
+
+# Security
+cryptography==41.0.4
+
+# API Documentation (optional)
+flasgger==0.9.7.1
