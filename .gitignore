@@ -48,10 +48,19 @@ models/*.onnx
 .dockerignore
 
 # Environment
+.env
 .env.local
 .env.production
+# .env.example agora será versionado como modelo
 
 # Certificates
 certs/*.pem
 certs/*.key
-EOF
+
+# Arquivos temporários e de backup
+*~
+*.bak
+
+# Lockfiles Python (opcional, descomente se usar pipenv/poetry)
+# Pipfile.lock
+# poetry.lock
