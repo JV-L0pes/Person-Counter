@@ -12,7 +12,6 @@ import uuid
 
 class Gender(Enum):
     """Enumeração para representar o gênero de uma pessoa detectada"""
-
     MALE = "male"
     FEMALE = "female"
     UNKNOWN = "unknown"
@@ -20,16 +19,14 @@ class Gender(Enum):
 
 class AgeGroup(Enum):
     """Enumeração para representar o grupo etário de uma pessoa detectada"""
-
-    CHILD = "child"  # 0-17 anos
-    ADULT = "adult"  # 18+ anos
+    CHILD = "child"  # 0-14 anos
+    ADULT = "adult"  # 15+ anos
     UNKNOWN = "unknown"
 
 
 @dataclass(frozen=True)
 class BoundingBox:
     """Value Object para representar as coordenadas da detecção"""
-
     x: int
     y: int
     width: int
